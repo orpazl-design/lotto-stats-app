@@ -1,13 +1,18 @@
-name: עדכון דוח הלוטו
+name: פרסום דוח הלוטו ל-Pages
 
+# אתר מפעל הפיס חוסם גישה ממחוץ לישראל, אז ה-fetch/build לא יכולים לרוץ
+# בענן של GitHub - הם רצים מקומית (Task Scheduler) והתוצאה נדחפת לכאן.
+# ה-workflow הזה רק מפרסם את report.html שכבר קיים ב-repo ל-GitHub Pages,
+# בכל פעם שהוא משתנה.
 on:
-  schedule:
-    # פעמיים בשבוע, ראשון ורביעי בבוקר (שעון קיץ ישראל UTC+3 -> 05:07 UTC = 08:07)
-    - cron: "7 5 * * 0,3"
+  push:
+    branches: [master]
+    paths:
+      - "report.html"
   workflow_dispatch: {}
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -16,34 +21,13 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-
-      - name: Install dependencies
-        run: pip install requests urllib3
-
-      - name: Network diagnostic
-        run: |
-          nslookup www.pais.co.il || true
-          curl -v --max-time 10 https://www.pais.co.il/ || true
-
-      - name: Fetch latest lotto data
-        run: python fetch_data.py
-
-      - name: Build report
-        run: python build_report.py
-
-      - name: Commit updated data back to the repo
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "עדכון אוטומטי: נתוני הגרלות + היסטוריית הצעות"
-          file_pattern: "data/*.csv data/*.json"
 
       - name: Prepare Pages content
         run: |
@@ -54,13 +38,5 @@ jobs:
         with:
           path: "_site"
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - id: deployment
         uses: actions/deploy-pages@v4
-
