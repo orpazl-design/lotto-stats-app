@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>סטטיסטיקת הגרלות הלוטו</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2a78d6">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="לוטו סטטיסטיקה">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+  .viz-root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --page:           #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --baseline:       #c3c2b7;
+    --series-1:       #2a78d6;
+    --series-1-dark:  #1c5cab;
+    --series-hot:     #eb6834;
+    --border:         rgba(11,11,11,0.10);
+    --card:           #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) .viz-root {
+      color-scheme: dark;
+      --surface-1:      #1a1a19;
+      --page:           #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --gridline:       #2c2c2a;
+      --baseline:       #383835;
+      --series-1:       #3987e5;
+      --series-1-dark:  #184f95;
+      --series-hot:     #d95926;
+      --border:         rgba(255,255,255,0.10);
+      --card:           #202020;
+    }
+  }
+  :root[data-theme="dark"] .viz-root {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --page:           #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:       #2c2c2a;
+    --baseline:       #383835;
+    --series-1:       #3987e5;
+    --series-1-dark:  #184f95;
+    --series-hot:     #d95926;
+    --border:         rgba(255,255,255,0.10);
+    --card:           #202020;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    background: var(--page);
+    color: var(--text-primary);
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 32px 20px 80px; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  .subtitle { color: var(--text-secondary); margin: 0 0 24px; font-size: 0.95rem; }
+  .disclaimer {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-right: 4px solid var(--series-hot);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .disclaimer strong { color: var(--text-primary); }
+
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 28px; }
+  .tile {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .tile .value { font-size: 1.5rem; font-weight: 600; }
+  .tile .label { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+
+  section { margin-bottom: 36px; }
+  h2 { font-size: 1.15rem; margin: 0 0 4px; }
+  .section-desc { color: var(--text-secondary); font-size: 0.88rem; margin: 0 0 14px; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+  }
+
+  .bar-chart { width: 100%; height: auto; overflow: visible; }
+  .bar { fill: var(--series-1); cursor: pointer; transition: fill 0.1s; }
+  .bar:hover { fill: var(--series-1-dark); }
+  .bar-hot { fill: var(--series-hot); }
+  .bar-axis-label { fill: var(--text-muted); font-size: 10px; }
+  .gridline { stroke: var(--gridline); stroke-width: 1; }
+
+  .tooltip {
+    position: fixed;
+    pointer-events: none;
+    background: var(--text-primary);
+    color: var(--page);
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    opacity: 0;
+    transform: translate(-50%, -110%);
+    transition: opacity 0.08s;
+    white-space: nowrap;
+    z-index: 10;
+  }
+  .tooltip.show { opacity: 1; }
+
+  .tables { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  th { text-align: right; color: var(--text-muted); font-weight: 500; font-size: 0.78rem; padding: 4px 6px; border-bottom: 1px solid var(--gridline); }
+  td { padding: 6px; border-bottom: 1px solid var(--gridline); }
+  .num-cell { width: 44px; }
+  .num-pill {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--series-1); color: #fff; font-weight: 600; font-size: 0.85rem;
+  }
+  .num-pill-strong { background: var(--series-hot); }
+
+  .pick-plus { color: var(--text-muted); margin: 0 6px; font-size: 1.2rem; }
+  .picks-list { display: flex; flex-direction: column; gap: 10px; }
+  .pick-row {
+    display: flex; align-items: center; gap: 12px;
+    padding: 8px 4px; border-bottom: 1px solid var(--gridline);
+  }
+  .pick-row:last-child { border-bottom: none; }
+  .pick-idx { color: var(--text-muted); font-size: 0.85rem; width: 28px; flex-shrink: 0; }
+  .pick-nums { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+
+  footer { color: var(--text-muted); font-size: 0.8rem; margin-top: 40px; line-height: 1.7; }
+  footer a { color: var(--text-secondary); }
+</style>
+</head>
+<body>
+<div class="viz-root">
+<div class="wrap">
+  <h1>סטטיסטיקת הגרלות הלוטו הישראלי</h1>
+  <p class="subtitle">מבוסס על 1718 הגרלות בפורמט הנוכחי (6 מתוך 1–37 + מספר חזק 1–7), מ-05/03/2011 עד 01/08/2026. מקור: ארכיון מפעל הפיס. עודכן אוטומטית ב-04/08/2026.</p>
+
+  <div class="disclaimer">
+    <strong>חשוב:</strong> הגרלת הלוטו היא אירוע אקראי לחלוטין ובלתי תלוי בהגרלות
+    קודמות — לכל מספר יש בכל הגרלה בדיוק אותו סיכוי סטטיסטי להיבחר, בלי קשר
+    לכמה פעמים הוא הופיע בעבר. הנתונים כאן הם <strong>תיאור היסטורי</strong> של מה שכבר
+    קרה, לא ניבוי של מה שיקרה. ה"הצעות" בתחתית הדף הן לשעשוע בלבד.
+  </div>
+
+  <div class="tiles">
+    <div class="tile"><div class="value">1718</div><div class="label">הגרלות שנותחו</div></div>
+    <div class="tile"><div class="value">25</div><div class="label">המספר השכיח ביותר (309 פעמים)</div></div>
+    <div class="tile"><div class="value">14</div><div class="label">המספר הפחות שכיח (244 פעמים)</div></div>
+    <div class="tile"><div class="value">10</div><div class="label">הכי הרבה זמן שלא הופיע (21 הגרלות)</div></div>
+  </div>
+
+  <section>
+    <h2>תדירות מספרים רגילים (1–37)</h2>
+    <p class="section-desc">כמה פעמים הופיע כל מספר לאורך ההיסטוריה. 6 המספרים השכיחים ביותר מסומנים בכתום. העבר עכבר מעל עמודה לפרטים.</p>
+    <div class="card"><svg class="bar-chart" id="chart-regular" viewBox="0 0 900 260" role="img" aria-label="תרשים תדירות מספרים">
+  <line class="gridline" x1="36" x2="888" y1="232.00" y2="232.00"></line><text class="bar-axis-label" x="28" y="236.00" text-anchor="end">0</text><line class="gridline" x1="36" x2="888" y1="178.00" y2="178.00"></line><text class="bar-axis-label" x="28" y="182.00" text-anchor="end">77</text><line class="gridline" x1="36" x2="888" y1="124.00" y2="124.00"></line><text class="bar-axis-label" x="28" y="128.00" text-anchor="end">154</text><line class="gridline" x1="36" x2="888" y1="70.00" y2="70.00"></line><text class="bar-axis-label" x="28" y="74.00" text-anchor="end">232</text><line class="gridline" x1="36" x2="888" y1="16.00" y2="16.00"></line><text class="bar-axis-label" x="28" y="20.00" text-anchor="end">309</text>
+  <rect class="bar bar-hot" data-num="1" data-count="297" x="36.00" y="24.39" width="19.14" height="207.61" rx="3"></rect><text class="bar-axis-label" x="45.57" y="248" text-anchor="middle">1</text><rect class="bar" data-num="2" data-count="270" x="59.14" y="43.26" width="19.14" height="188.74" rx="3"></rect><text class="bar-axis-label" x="68.70" y="248" text-anchor="middle">2</text><rect class="bar" data-num="3" data-count="275" x="82.27" y="39.77" width="19.14" height="192.23" rx="3"></rect><text class="bar-axis-label" x="91.84" y="248" text-anchor="middle">3</text><rect class="bar" data-num="4" data-count="257" x="105.41" y="52.35" width="19.14" height="179.65" rx="3"></rect><text class="bar-axis-label" x="114.97" y="248" text-anchor="middle">4</text><rect class="bar" data-num="5" data-count="277" x="128.54" y="38.37" width="19.14" height="193.63" rx="3"></rect><text class="bar-axis-label" x="138.11" y="248" text-anchor="middle">5</text><rect class="bar" data-num="6" data-count="275" x="151.68" y="39.77" width="19.14" height="192.23" rx="3"></rect><text class="bar-axis-label" x="161.24" y="248" text-anchor="middle">6</text><rect class="bar" data-num="7" data-count="272" x="174.81" y="41.86" width="19.14" height="190.14" rx="3"></rect><text class="bar-axis-label" x="184.38" y="248" text-anchor="middle">7</text><rect class="bar" data-num="8" data-count="289" x="197.95" y="29.98" width="19.14" height="202.02" rx="3"></rect><text class="bar-axis-label" x="207.51" y="248" text-anchor="middle">8</text><rect class="bar" data-num="9" data-count="272" x="221.08" y="41.86" width="19.14" height="190.14" rx="3"></rect><text class="bar-axis-label" x="230.65" y="248" text-anchor="middle">9</text><rect class="bar" data-num="10" data-count="281" x="244.22" y="35.57" width="19.14" height="196.43" rx="3"></rect><text class="bar-axis-label" x="253.78" y="248" text-anchor="middle">10</text><rect class="bar bar-hot" data-num="11" data-count="307" x="267.35" y="17.40" width="19.14" height="214.60" rx="3"></rect><text class="bar-axis-label" x="276.92" y="248" text-anchor="middle">11</text><rect class="bar bar-hot" data-num="12" data-count="296" x="290.49" y="25.09" width="19.14" height="206.91" rx="3"></rect><text class="bar-axis-label" x="300.05" y="248" text-anchor="middle">12</text><rect class="bar" data-num="13" data-count="283" x="313.62" y="34.17" width="19.14" height="197.83" rx="3"></rect><text class="bar-axis-label" x="323.19" y="248" text-anchor="middle">13</text><rect class="bar" data-num="14" data-count="244" x="336.76" y="61.44" width="19.14" height="170.56" rx="3"></rect><text class="bar-axis-label" x="346.32" y="248" text-anchor="middle">14</text><rect class="bar" data-num="15" data-count="261" x="359.89" y="49.55" width="19.14" height="182.45" rx="3"></rect><text class="bar-axis-label" x="369.46" y="248" text-anchor="middle">15</text><rect class="bar" data-num="16" data-count="264" x="383.03" y="47.46" width="19.14" height="184.54" rx="3"></rect><text class="bar-axis-label" x="392.59" y="248" text-anchor="middle">16</text><rect class="bar" data-num="17" data-count="275" x="406.16" y="39.77" width="19.14" height="192.23" rx="3"></rect><text class="bar-axis-label" x="415.73" y="248" text-anchor="middle">17</text><rect class="bar" data-num="18" data-count="271" x="429.30" y="42.56" width="19.14" height="189.44" rx="3"></rect><text class="bar-axis-label" x="438.86" y="248" text-anchor="middle">18</text><rect class="bar" data-num="19" data-count="270" x="452.43" y="43.26" width="19.14" height="188.74" rx="3"></rect><text class="bar-axis-label" x="462.00" y="248" text-anchor="middle">19</text><rect class="bar" data-num="20" data-count="281" x="475.57" y="35.57" width="19.14" height="196.43" rx="3"></rect><text class="bar-axis-label" x="485.14" y="248" text-anchor="middle">20</text><rect class="bar" data-num="21" data-count="292" x="498.70" y="27.88" width="19.14" height="204.12" rx="3"></rect><text class="bar-axis-label" x="508.27" y="248" text-anchor="middle">21</text><rect class="bar" data-num="22" data-count="272" x="521.84" y="41.86" width="19.14" height="190.14" rx="3"></rect><text class="bar-axis-label" x="531.41" y="248" text-anchor="middle">22</text><rect class="bar" data-num="23" data-count="276" x="544.97" y="39.07" width="19.14" height="192.93" rx="3"></rect><text class="bar-axis-label" x="554.54" y="248" text-anchor="middle">23</text><rect class="bar" data-num="24" data-count="269" x="568.11" y="43.96" width="19.14" height="188.04" rx="3"></rect><text class="bar-axis-label" x="577.68" y="248" text-anchor="middle">24</text><rect class="bar bar-hot" data-num="25" data-count="309" x="591.24" y="16.00" width="19.14" height="216.00" rx="3"></rect><text class="bar-axis-label" x="600.81" y="248" text-anchor="middle">25</text><rect class="bar bar-hot" data-num="26" data-count="298" x="614.38" y="23.69" width="19.14" height="208.31" rx="3"></rect><text class="bar-axis-label" x="623.95" y="248" text-anchor="middle">26</text><rect class="bar" data-num="27" data-count="293" x="637.51" y="27.18" width="19.14" height="204.82" rx="3"></rect><text class="bar-axis-label" x="647.08" y="248" text-anchor="middle">27</text><rect class="bar" data-num="28" data-count="282" x="660.65" y="34.87" width="19.14" height="197.13" rx="3"></rect><text class="bar-axis-label" x="670.22" y="248" text-anchor="middle">28</text><rect class="bar bar-hot" data-num="29" data-count="298" x="683.78" y="23.69" width="19.14" height="208.31" rx="3"></rect><text class="bar-axis-label" x="693.35" y="248" text-anchor="middle">29</text><rect class="bar" data-num="30" data-count="279" x="706.92" y="36.97" width="19.14" height="195.03" rx="3"></rect><text class="bar-axis-label" x="716.49" y="248" text-anchor="middle">30</text><rect class="bar" data-num="31" data-count="258" x="730.05" y="51.65" width="19.14" height="180.35" rx="3"></rect><text class="bar-axis-label" x="739.62" y="248" text-anchor="middle">31</text><rect class="bar" data-num="32" data-count="256" x="753.19" y="53.05" width="19.14" height="178.95" rx="3"></rect><text class="bar-axis-label" x="762.76" y="248" text-anchor="middle">32</text><rect class="bar" data-num="33" data-count="277" x="776.32" y="38.37" width="19.14" height="193.63" rx="3"></rect><text class="bar-axis-label" x="785.89" y="248" text-anchor="middle">33</text><rect class="bar" data-num="34" data-count="283" x="799.46" y="34.17" width="19.14" height="197.83" rx="3"></rect><text class="bar-axis-label" x="809.03" y="248" text-anchor="middle">34</text><rect class="bar" data-num="35" data-count="295" x="822.59" y="25.79" width="19.14" height="206.21" rx="3"></rect><text class="bar-axis-label" x="832.16" y="248" text-anchor="middle">35</text><rect class="bar" data-num="36" data-count="268" x="845.73" y="44.66" width="19.14" height="187.34" rx="3"></rect><text class="bar-axis-label" x="855.30" y="248" text-anchor="middle">36</text><rect class="bar" data-num="37" data-count="286" x="868.86" y="32.08" width="19.14" height="199.92" rx="3"></rect><text class="bar-axis-label" x="878.43" y="248" text-anchor="middle">37</text>
+</svg></div>
+  </section>
+
+  <section>
+    <h2>תדירות המספר החזק (1–7)</h2>
+    <p class="section-desc">כמה פעמים נבחר כל מספר חזק.</p>
+    <div class="card"><svg class="bar-chart" id="chart-strong" viewBox="0 0 420 260" role="img" aria-label="תרשים תדירות מספרים">
+  <line class="gridline" x1="36" x2="408" y1="232.00" y2="232.00"></line><text class="bar-axis-label" x="28" y="236.00" text-anchor="end">0</text><line class="gridline" x1="36" x2="408" y1="178.00" y2="178.00"></line><text class="bar-axis-label" x="28" y="182.00" text-anchor="end">65</text><line class="gridline" x1="36" x2="408" y1="124.00" y2="124.00"></line><text class="bar-axis-label" x="28" y="128.00" text-anchor="end">130</text><line class="gridline" x1="36" x2="408" y1="70.00" y2="70.00"></line><text class="bar-axis-label" x="28" y="74.00" text-anchor="end">194</text><line class="gridline" x1="36" x2="408" y1="16.00" y2="16.00"></line><text class="bar-axis-label" x="28" y="20.00" text-anchor="end">259</text>
+  <rect class="bar" data-num="1" data-count="238" x="36.00" y="33.51" width="49.71" height="198.49" rx="3"></rect><text class="bar-axis-label" x="60.86" y="248" text-anchor="middle">1</text><rect class="bar" data-num="2" data-count="245" x="89.71" y="27.68" width="49.71" height="204.32" rx="3"></rect><text class="bar-axis-label" x="114.57" y="248" text-anchor="middle">2</text><rect class="bar" data-num="3" data-count="253" x="143.43" y="21.00" width="49.71" height="211.00" rx="3"></rect><text class="bar-axis-label" x="168.29" y="248" text-anchor="middle">3</text><rect class="bar" data-num="4" data-count="233" x="197.14" y="37.68" width="49.71" height="194.32" rx="3"></rect><text class="bar-axis-label" x="222.00" y="248" text-anchor="middle">4</text><rect class="bar" data-num="5" data-count="253" x="250.86" y="21.00" width="49.71" height="211.00" rx="3"></rect><text class="bar-axis-label" x="275.71" y="248" text-anchor="middle">5</text><rect class="bar" data-num="6" data-count="259" x="304.57" y="16.00" width="49.71" height="216.00" rx="3"></rect><text class="bar-axis-label" x="329.43" y="248" text-anchor="middle">6</text><rect class="bar" data-num="7" data-count="237" x="358.29" y="34.35" width="49.71" height="197.65" rx="3"></rect><text class="bar-axis-label" x="383.14" y="248" text-anchor="middle">7</text>
+</svg></div>
+  </section>
+
+  <section>
+    <h2>מספרים חמים, קרים ו"באיחור"</h2>
+    <p class="section-desc">חמים = השכיחים ביותר בהיסטוריה. קרים = הפחות שכיחים. באיחור = הכי הרבה הגרלות מאז שהופיעו לאחרונה.</p>
+    <div class="tables">
+      <div class="card">
+        <h3 style="margin-top:0;font-size:0.95rem;">🔥 10 המספרים החמים</h3>
+        <table><thead><tr><th>מספר</th><th>הופעות</th><th>הופעה אחרונה</th></tr></thead>
+        <tbody><tr><td class="num-cell"><span class="num-pill">25</span></td><td>309</td><td>25/07/2026</td></tr><tr><td class="num-cell"><span class="num-pill">11</span></td><td>307</td><td>21/07/2026</td></tr><tr><td class="num-cell"><span class="num-pill">26</span></td><td>298</td><td>25/07/2026</td></tr><tr><td class="num-cell"><span class="num-pill">29</span></td><td>298</td><td>25/06/2026</td></tr><tr><td class="num-cell"><span class="num-pill">1</span></td><td>297</td><td>28/07/2026</td></tr><tr><td class="num-cell"><span class="num-pill">12</span></td><td>296</td><td>01/08/2026</td></tr><tr><td class="num-cell"><span class="num-pill">35</span></td><td>295</td><td>14/07/2026</td></tr><tr><td class="num-cell"><span class="num-pill">27</span></td><td>293</td><td>16/07/2026</td></tr><tr><td class="num-cell"><span class="num-pill">21</span></td><td>292</td><td>28/07/2026</td></tr><tr><td class="num-cell"><span class="num-pill">8</span></td><td>289</td><td>28/07/2026</td></tr></tbody></table>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0;font-size:0.95rem;">❄️ 10 המספרים הקרים</h3>
+        <table><thead><tr><th>מספר</th><th>הופעות</th><th>הופעה אחרונה</th></tr></thead>
+        <tbody><tr><td class="num-cell"><span class="num-pill">14</span></td><td>244</td><td>01/08/2026</td></tr><tr><td class="num-cell"><span class="num-pill">32</span></td><td>256</td><td>01/08/2026</td></tr><tr><td class="num-cell"><span class="num-pill">4</span></td><td>257</td><td>13/06/2026</td></tr><tr><td class="num-cell"><span class="num-pill">31</span></td><td>258</td><td>18/07/2026</td></tr><tr><td class="num-cell"><span class="num-pill">15</span></td><td>261</td><td>07/07/2026</td></tr><tr><td class="num-cell"><span class="num-pill">16</span></td><td>264</td><td>01/08/2026</td></tr><tr><td class="num-cell"><span class="num-pill">36</span></td><td>268</td><td>21/07/2026</td></tr><tr><td class="num-cell"><span class="num-pill">24</span></td><td>269</td><td>30/06/2026</td></tr><tr><td class="num-cell"><span class="num-pill">2</span></td><td>270</td><td>16/07/2026</td></tr><tr><td class="num-cell"><span class="num-pill">19</span></td><td>270</td><td>28/07/2026</td></tr></tbody></table>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0;font-size:0.95rem;">⏳ 10 המספרים "באיחור"</h3>
+        <table><thead><tr><th>מספר</th><th>הופעות</th><th>לא הופיע כבר</th></tr></thead>
+        <tbody><tr><td class="num-cell"><span class="num-pill">10</span></td><td>281</td><td>21 הגרלות</td></tr><tr><td class="num-cell"><span class="num-pill">17</span></td><td>275</td><td>20 הגרלות</td></tr><tr><td class="num-cell"><span class="num-pill">22</span></td><td>272</td><td>18 הגרלות</td></tr><tr><td class="num-cell"><span class="num-pill">4</span></td><td>257</td><td>16 הגרלות</td></tr><tr><td class="num-cell"><span class="num-pill">3</span></td><td>275</td><td>14 הגרלות</td></tr><tr><td class="num-cell"><span class="num-pill">29</span></td><td>298</td><td>12 הגרלות</td></tr><tr><td class="num-cell"><span class="num-pill">24</span></td><td>269</td><td>10 הגרלות</td></tr><tr><td class="num-cell"><span class="num-pill">15</span></td><td>261</td><td>8 הגרלות</td></tr><tr><td class="num-cell"><span class="num-pill">7</span></td><td>272</td><td>7 הגרלות</td></tr><tr><td class="num-cell"><span class="num-pill">30</span></td><td>279</td><td>7 הגרלות</td></tr></tbody></table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>10 הצעות משעשעות להגרלה הבאה</h2>
+    <p class="section-desc">
+      כל שורה נבחרה אקראית בנפרד, כשההסתברות של כל מספר להיבחר משוקללת לפי
+      תדירותו ההיסטורית. <strong>אלה לא תחזיות אמיתיות</strong> — ראו את ההבהרה למעלה.
+    </p>
+    <div class="card">
+      <div class="picks-list"><div class="pick-row"><span class="pick-idx">#1</span><span class="pick-nums"><span class="num-pill">8</span><span class="num-pill">14</span><span class="num-pill">17</span><span class="num-pill">24</span><span class="num-pill">29</span><span class="num-pill">30</span><span class="pick-plus">+</span><span class="num-pill num-pill-strong">3</span></span></div><div class="pick-row"><span class="pick-idx">#2</span><span class="pick-nums"><span class="num-pill">5</span><span class="num-pill">10</span><span class="num-pill">18</span><span class="num-pill">20</span><span class="num-pill">27</span><span class="num-pill">31</span><span class="pick-plus">+</span><span class="num-pill num-pill-strong">3</span></span></div><div class="pick-row"><span class="pick-idx">#3</span><span class="pick-nums"><span class="num-pill">7</span><span class="num-pill">8</span><span class="num-pill">15</span><span class="num-pill">16</span><span class="num-pill">18</span><span class="num-pill">21</span><span class="pick-plus">+</span><span class="num-pill num-pill-strong">1</span></span></div><div class="pick-row"><span class="pick-idx">#4</span><span class="pick-nums"><span class="num-pill">4</span><span class="num-pill">15</span><span class="num-pill">18</span><span class="num-pill">19</span><span class="num-pill">24</span><span class="num-pill">28</span><span class="pick-plus">+</span><span class="num-pill num-pill-strong">7</span></span></div><div class="pick-row"><span class="pick-idx">#5</span><span class="pick-nums"><span class="num-pill">9</span><span class="num-pill">11</span><span class="num-pill">12</span><span class="num-pill">16</span><span class="num-pill">23</span><span class="num-pill">30</span><span class="pick-plus">+</span><span class="num-pill num-pill-strong">5</span></span></div><div class="pick-row"><span class="pick-idx">#6</span><span class="pick-nums"><span class="num-pill">7</span><span class="num-pill">15</span><span class="num-pill">23</span><span class="num-pill">25</span><span class="num-pill">30</span><span class="num-pill">34</span><span class="pick-plus">+</span><span class="num-pill num-pill-strong">5</span></span></div><div class="pick-row"><span class="pick-idx">#7</span><span class="pick-nums"><span class="num-pill">8</span><span class="num-pill">10</span><span class="num-pill">12</span><span class="num-pill">13</span><span class="num-pill">16</span><span class="num-pill">33</span><span class="pick-plus">+</span><span class="num-pill num-pill-strong">3</span></span></div><div class="pick-row"><span class="pick-idx">#8</span><span class="pick-nums"><span class="num-pill">1</span><span class="num-pill">5</span><span class="num-pill">15</span><span class="num-pill">27</span><span class="num-pill">29</span><span class="num-pill">37</span><span class="pick-plus">+</span><span class="num-pill num-pill-strong">2</span></span></div><div class="pick-row"><span class="pick-idx">#9</span><span class="pick-nums"><span class="num-pill">7</span><span class="num-pill">22</span><span class="num-pill">25</span><span class="num-pill">27</span><span class="num-pill">28</span><span class="num-pill">34</span><span class="pick-plus">+</span><span class="num-pill num-pill-strong">4</span></span></div><div class="pick-row"><span class="pick-idx">#10</span><span class="pick-nums"><span class="num-pill">1</span><span class="num-pill">8</span><span class="num-pill">12</span><span class="num-pill">18</span><span class="num-pill">22</span><span class="num-pill">29</span><span class="pick-plus">+</span><span class="num-pill num-pill-strong">3</span></span></div></div>
+    </div>
+  </section>
+
+  <footer>
+    מקור הנתונים: <a href="https://www.pais.co.il/lotto/archive.aspx" target="_blank" rel="noopener">ארכיון תוצאות הלוטו, מפעל הפיס</a>.
+    התוצאות המוצגות אינן רשמיות ואינן מחייבות; לתוצאות הרשמיות יש לפנות למפעל הפיס.
+    הדוח מתעדכן אוטומטית מדי שבוע.
+  </footer>
+</div>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+<script>
+  const tooltip = document.getElementById('tooltip');
+  document.querySelectorAll('.bar').forEach(bar => {
+    bar.addEventListener('mousemove', (e) => {
+      const num = bar.getAttribute('data-num');
+      const count = bar.getAttribute('data-count');
+      tooltip.textContent = `מספר ${num}: ${count} הופעות`;
+      tooltip.style.left = e.clientX + 'px';
+      tooltip.style.top = e.clientY + 'px';
+      tooltip.classList.add('show');
+    });
+    bar.addEventListener('mouseleave', () => tooltip.classList.remove('show'));
+  });
+</script>
+</body>
+</html>

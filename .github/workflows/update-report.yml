@@ -1,0 +1,60 @@
+name: עדכון דוח הלוטו
+
+on:
+  schedule:
+    # פעמיים בשבוע, ראשון ורביעי בבוקר (שעון קיץ ישראל UTC+3 -> 05:07 UTC = 08:07)
+    - cron: "7 5 * * 0,3"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install requests urllib3
+
+      - name: Fetch latest lotto data
+        run: python fetch_data.py
+
+      - name: Build report
+        run: python build_report.py
+
+      - name: Commit updated data back to the repo
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "עדכון אוטומטי: נתוני הגרלות + היסטוריית הצעות"
+          file_pattern: "data/*.csv data/*.json"
+
+      - name: Prepare Pages content
+        run: |
+          mkdir -p _site
+          cp report.html _site/index.html
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site"
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
