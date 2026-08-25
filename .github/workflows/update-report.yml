@@ -28,6 +28,11 @@ jobs:
       - name: Install dependencies
         run: pip install requests urllib3
 
+      - name: Network diagnostic
+        run: |
+          nslookup www.pais.co.il || true
+          curl -v --max-time 10 https://www.pais.co.il/ || true
+
       - name: Fetch latest lotto data
         run: python fetch_data.py
 
